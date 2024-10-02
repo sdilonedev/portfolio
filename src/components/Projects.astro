@@ -1,0 +1,79 @@
+---
+import ExpressIcon from "./icons/express.astro";
+import RustIcon from "./icons/rust.astro";
+import TypescriptIcon from "./icons/typescript.astro";
+import SocialPill from "./SocialPill.astro";
+import Github from "./icons/github.astro";
+
+const TAGS = {
+  RUST: {
+    name: "Rust Lang",
+    icon: RustIcon
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    icon: TypescriptIcon
+  },
+  EXPRESS: {
+    name: "Express",
+    icon: ExpressIcon
+  }
+}
+
+const PROJECTS = [
+  {
+    title: "Bundle - Administrador de Tareas en RUST",
+    description: "Bundle ofrece componentes visuales como monitores de CPU, RAM, lista de procesos y detalles de procesos individuales.",
+    github: "https://github.com/sdilonedev/bundle",
+    image: "/projects/bundle.webp",
+    tags: [TAGS.RUST],
+  },
+  {
+    title: "Cloudgif - API basada en una experiencia de CDN",
+    description: "Una API simple que se conecta con Cloudinary para proporcionar una experiencia de CDN, ofreciendo gifs de anime, inspirado en CDN Neko.",
+    github: "https://github.com/sdilonedev/cloudgif",
+    image: "/projects/cloudgif.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.EXPRESS],
+  }
+]
+---
+<section class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, github }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-purple-200 mb-2">
+          {title}
+        </h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-wrap gap-x-2 mb-2">
+            {tags.map((tag) => (
+              <li class="mb-2">
+                <span
+                  class="flex gap-x-2 rounded-full text-xs bg-white/5 border border-white/10 py-1 px-2"
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        <footer class="flex gap-x-4 items-end justify-start mt-4">
+          {github && (
+            <SocialPill href={github}>
+              <Github class="size-6" />
+              Ver código fuente
+            </SocialPill>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</section>

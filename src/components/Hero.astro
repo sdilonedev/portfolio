@@ -1,0 +1,40 @@
+---
+ import SocialPill from "./SocialPill.astro"
+ import Linkedin from "./icons/linkedin.astro"
+ import Envelope from "./icons/envelope.astro"
+ import Badge from "./Badge.astro"
+---
+<div class="max-w-xl">
+  <div class="flex mb-4">
+    <a
+      href="https://www.linkedin.com/in/stalindilone/"
+      aria-label="LinkedIn Link"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+    </a>
+    <Badge>Disponible para Trabajar</Badge>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight sm:text-5xl text-white"
+  >
+    Hola, soy sdilonedev
+  </h1>
+  <p
+    class="mt-6 text-xl [&>strong]:text-purple-500 [&>strong]:font-semibold text-gray-300"
+  >
+  Estudiante de <strong>Ingeniería de Sistemas y Desarrollador Full-Stack</strong> con experiencia en la creación de sitios web y aplicaciones desde la República Dominicana 🇩🇴. Especializado en el desarrollo de aplicaciones web eficientes y atractivas.
+  </p>
+
+  <div class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:dilonealcantara@gmail.com" aria-label="Email">
+      <Envelope class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/stalindilone/" aria-label="LinkedIn Link">
+      <Linkedin class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </div>
+</div>
