@@ -1,18 +1,19 @@
 ---
-import "@fontsource-variable/space-grotesk"
+import "@fontsource-variable/space-grotesk";
 
-import { ViewTransitions } from "astro:transitions"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -25,9 +26,7 @@ const { description, title } = Astro.props
   </head>
   <body class="relative text-white bg-token-dark-5">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
     <Header />
