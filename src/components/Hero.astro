@@ -1,9 +1,11 @@
 ---
- import SocialPill from "./SocialPill.astro"
- import Linkedin from "./icons/linkedin.astro"
- import Envelope from "./icons/envelope.astro"
- import Badge from "./Badge.astro"
+import SocialPill from "./SocialPill.astro";
+import Linkedin from "./icons/linkedin.astro";
+import Badge from "./Badge.astro";
+import Mailbox from "./icons/mailbox.astro";
+import ScrollText from "./icons/scrolltext.astro";
 ---
+
 <div class="max-w-xl">
   <div class="flex mb-4">
     <a
@@ -16,25 +18,37 @@
     </a>
     <Badge>Disponible para Trabajar</Badge>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight sm:text-5xl text-white"
-  >
+  <h1 class="text-4xl font-bold tracking-tight sm:text-5xl text-white">
     Hola, soy sdilonedev
   </h1>
   <p
     class="mt-6 text-xl [&>strong]:text-purple-500 [&>strong]:font-semibold text-gray-300"
   >
-  Estudiante de <strong>Ingeniería de Sistemas y Desarrollador Full-Stack</strong> con experiencia en la creación de sitios web y aplicaciones desde la República Dominicana 🇩🇴. Especializado en el desarrollo de aplicaciones web eficientes y atractivas.
+    Estudiante de <strong
+      >Ingeniería de Sistemas y Desarrollador Full-Stack</strong
+    > con experiencia en la creación de sitios web y aplicaciones desde la República
+    Dominicana 🇩🇴. Especializado en el desarrollo de aplicaciones web eficientes
+    y atractivas.
   </p>
 
-  <div class="flex flex-wrap gap-4 mt-8">
+  <div class="flex flex-wrap gap-2 mt-6 md:gap-4 md:mt-8">
     <SocialPill href="mailto:dilonealcantara@gmail.com" aria-label="Email">
-      <Envelope class="size-4" />
+      <Mailbox class="size-4" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/stalindilone/" aria-label="LinkedIn Link">
+    <SocialPill
+      href="https://www.linkedin.com/in/stalindilone/"
+      aria-label="LinkedIn Link"
+    >
       <Linkedin class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill
+      href="https://drive.google.com/file/d/16KfURaBsLj08She_fNPQJP7-dcRVE6SQ/view?pli=1"
+      aria-label="CV Link"
+    >
+      <ScrollText class="size-4" />
+        Curriculum
     </SocialPill>
   </div>
 </div>
