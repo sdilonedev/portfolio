@@ -18,11 +18,11 @@ const navItems = [
 ]
 ---
 <header class="fixed top-0 z-10 w-full flex justify-center mx-auto mt-3">
-  <nav class="flex text-sm font-medium rounded-full text-token-neutral-217 justify-center items-center bg-token-dark-10/60 px-3 backdrop-blur-md">
+  <nav class="flex text-sm font-medium rounded-full text-token-neutral-217 justify-center items-center bg-token-dark-10/60 px-3 backdrop-blur-md gap-6">
     {
       navItems.map((link) => (
         <a 
-          class="relative block p-2 transition hover:text-purple-500"
+          class="relative block p-2 transition uppercase hover:text-purple-500 hover:underline"
           aria-label={link.id}
           href={link.url}
         >
