@@ -24,11 +24,9 @@ const { description, title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="relative text-white bg-token-dark-5">
-    <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    >
-    </div>
+  <body
+    class="relative text-white bg-[#020617] bg-[url(/bg.svg)] bg-repeat bg-cover"
+  >
     <Header />
     <slot />
     <Footer />
