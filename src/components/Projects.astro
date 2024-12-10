@@ -4,64 +4,73 @@ import RustIcon from "./icons/rust.astro";
 import TypescriptIcon from "./icons/typescript.astro";
 import SocialPill from "./SocialPill.astro";
 import Github from "./icons/github.astro";
+import Next from "./icons/next.astro";
 
 const TAGS = {
   RUST: {
     name: "Rust Lang",
-    icon: RustIcon
+    icon: RustIcon,
   },
   TYPESCRIPT: {
     name: "TypeScript",
-    icon: TypescriptIcon
+    icon: TypescriptIcon,
   },
   EXPRESS: {
     name: "Express",
-    icon: ExpressIcon
-  }
-}
+    icon: ExpressIcon,
+  },
+  NEXT: {
+    name: "Next.js",
+    icon: Next,
+  },
+};
 
 const PROJECTS = [
   {
     title: "Bundle - Administrador de Tareas en RUST",
-    description: "Bundle ofrece componentes visuales como monitores de CPU, RAM, lista de procesos y detalles de procesos individuales.",
+    description:
+      "Bundle ofrece componentes visuales como monitores de CPU, RAM, lista de procesos y detalles de procesos individuales.",
     github: "https://github.com/sdilonedev/bundle",
     image: "/projects/bundle.webp",
     tags: [TAGS.RUST],
   },
   {
-    title: "Cloudgif - API basada en una experiencia de CDN",
-    description: "Una API simple que se conecta con Cloudinary para proporcionar una experiencia de CDN, ofreciendo gifs de anime, inspirado en CDN Neko.",
-    github: "https://github.com/sdilonedev/cloudgif",
-    image: "/projects/cloudgif.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.EXPRESS],
-  }
-]
+    title: "Slash - Acortador de URL",
+    description:
+      "Slash es un acortador de URLs que permite crear enlaces personalizados, gestionar estadísticas de clics y dispositivos, y optimizar el intercambio de enlaces de forma sencilla.",
+    github: "https://github.com/sdilonedev/slash",
+    image: "/projects/slash.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.NEXT],
+  },
+];
 ---
+
 <section class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/3">
           <div class="relative flex flex-col items-center gap-8 col-span-6 row-span-5 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
           </div>
         </div>
 
         <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-purple-300">
-            {title}
-          </h3>
-          
+          <h3 class="text-2xl font-bold text-purple-300">{title}</h3>
+
           <div class="flex flex-wrap mt-2">
             <ul class="flex flex-wrap gap-x-2 mb-2">
               {tags.map((tag) => (
                 <li class="mb-2">
-                <span
-                  class="flex gap-x-2 rounded-full text-xs bg-white/5 border border-white/10 py-1 px-2"
-                >
-                  <tag.icon class="size-4" />
-                  {tag.name}
-                </span>
+                  <span class="flex gap-x-2 rounded-full text-xs bg-white/5 border border-white/10 py-1 px-2">
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
                 </li>
               ))}
             </ul>
