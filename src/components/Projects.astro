@@ -5,6 +5,9 @@ import TypescriptIcon from "./icons/typescript.astro";
 import SocialPill from "./SocialPill.astro";
 import Github from "./icons/github.astro";
 import Next from "./icons/next.astro";
+import NestJs from "./icons/nestjs.astro";
+import Prisma from "./icons/prisma.astro";
+import Turso from "./icons/turso.astro";
 
 const TAGS = {
   RUST: {
@@ -23,6 +26,18 @@ const TAGS = {
     name: "Next.js",
     icon: Next,
   },
+  NESTJS: {
+    name: "NestJS",
+    icon: NestJs,
+  },
+  PRISMA: {
+    name: "Prisma",
+    icon: Prisma,
+  },
+  TURSO: {
+    name: "Turso",
+    icon: Turso,
+  },
 };
 
 const PROJECTS = [
@@ -40,7 +55,15 @@ const PROJECTS = [
       "Slash es un acortador de URLs que permite crear enlaces personalizados, gestionar estadísticas de clics y dispositivos, y optimizar el intercambio de enlaces de forma sencilla.",
     github: "https://github.com/sdilonedev/slash",
     image: "/projects/slash.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NEXT],
+    tags: [TAGS.TYPESCRIPT, TAGS.NEXT, TAGS.PRISMA, TAGS.TURSO],
+  },
+  {
+    title: "Courier - API REST con NestJS",
+    description:
+      "Courier es una API REST que permite gestionar envíos de paquetes y rastrear su estado en tiempo real.",
+    github: "https://github.com/sdilonedev/courier",
+    image: "/projects/courier.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.PRISMA],
   },
 ];
 ---
@@ -54,7 +77,6 @@ const PROJECTS = [
             <img
               alt="Recién llegado vs 5 años en Nueva Zelanda"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
               src={image}
             />
           </div>
