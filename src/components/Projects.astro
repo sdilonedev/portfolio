@@ -8,6 +8,9 @@ import Next from "./icons/next.astro";
 import NestJs from "./icons/nestjs.astro";
 import Prisma from "./icons/prisma.astro";
 import Turso from "./icons/turso.astro";
+import Typeorm from "./icons/typeorm.astro";
+import Docker from "./icons/docker.astro";
+import Postgres from "./icons/postgres.astro";
 
 const TAGS = {
   RUST: {
@@ -38,6 +41,18 @@ const TAGS = {
     name: "Turso",
     icon: Turso,
   },
+  TYPEORM: {
+    name: "TypeORM",
+    icon: Typeorm,
+  },
+  DOCKER: {
+    name: "Docker",
+    icon: Docker,
+  },
+  POSTGRES: {
+    name: "Postgres SQL",
+    icon: Postgres,
+  },
 };
 
 const PROJECTS = [
@@ -63,7 +78,13 @@ const PROJECTS = [
       "Courier es una API REST que permite gestionar envíos de paquetes y rastrear su estado en tiempo real.",
     github: "https://github.com/sdilonedev/courier",
     image: "/projects/courier.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NESTJS, TAGS.PRISMA],
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.NESTJS,
+      TAGS.TYPEORM,
+      TAGS.DOCKER,
+      TAGS.POSTGRES,
+    ],
   },
 ];
 ---
