@@ -11,6 +11,7 @@ import Turso from "./icons/turso.astro";
 import Typeorm from "./icons/typeorm.astro";
 import Docker from "./icons/docker.astro";
 import Postgres from "./icons/postgres.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   RUST: {
@@ -104,13 +105,13 @@ const PROJECTS = [
         </div>
 
         <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-purple-300">{title}</h3>
+          <h3 class="text-2xl font-bold text-blue-300">{title}</h3>
 
           <div class="flex flex-wrap mt-2">
             <ul class="flex flex-wrap gap-x-2 mb-2">
               {tags.map((tag) => (
                 <li class="mb-2">
-                  <span class="flex gap-x-2 rounded-full text-xs bg-white/5 border border-white/10 py-1 px-2">
+                  <span class="flex gap-x-2 rounded-full text-xs bg-gray-800 border border-gray-600 py-1 px-2">
                     <tag.icon class="size-4" />
                     {tag.name}
                   </span>
@@ -121,10 +122,10 @@ const PROJECTS = [
             <div class="mt-2 text-gray-400">{description}</div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
-                <SocialPill href={github}>
+                <LinkButton href={github}>
                   <Github class="size-6" />
                   Ver código fuente
-                </SocialPill>
+                </LinkButton>
               )}
             </footer>
           </div>

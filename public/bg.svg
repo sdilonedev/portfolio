@@ -6,16 +6,16 @@
   fill="none"
 >
   <g filter="url(#filter0_f_128_501)">
-    <ellipse cx="387.5" cy="366.557" rx="82.5" ry="68.5575" fill="#a97ad6" fill-opacity="0.9"/>
+    <ellipse cx="387.5" cy="366.557" rx="82.5" ry="68.5575" fill="#a855f7" fill-opacity="0.9"/>
   </g>
   <g filter="url(#filter1_f_128_501)">
-    <ellipse cx="351" cy="1663.88" rx="74.3105" ry="53" transform="rotate(90 351 1663.88)" fill="#a97ad6" fill-opacity="0.9"/>
+    <ellipse cx="351" cy="1663.88" rx="74.3105" ry="53" transform="rotate(90 351 1663.88)" fill="#a855f7" fill-opacity="0.9"/>
   </g>
   <g filter="url(#filter2_f_128_501)">
-    <ellipse cx="1808.5" cy="1250.13" rx="82.4607" ry="71.5" transform="rotate(90 1808.5 1250.13)" fill="#a97ad6" fill-opacity="0.9"/>
+    <ellipse cx="1808.5" cy="1250.13" rx="82.4607" ry="71.5" transform="rotate(90 1808.5 1250.13)" fill="#a855f7" fill-opacity="0.9"/>
   </g>
   <g filter="url(#filter3_f_128_501)">
-    <ellipse cx="1339" cy="2276.58" rx="62" ry="48.4217" fill="#a97ad6" fill-opacity="0.9"/>
+    <ellipse cx="1339" cy="2276.58" rx="62" ry="48.4217" fill="#a855f7" fill-opacity="0.9"/>
   </g>
   <defs>
     <filter id="filter0_f_128_501" x="7.39999" y="0.399994" width="760.2" height="732.315" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -33,7 +33,7 @@
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
       <feGaussianBlur stdDeviation="148.8" result="effect1_foregroundBlur_128_501"/>
     </filter>
-      <filter id="filter3_f_128_501" x="979.4" y="1930.56" width="719.2" height="692.043" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="filter3_f_128_501" x="979.4" y="1930.56" width="719.2" height="692.043" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
       <feGaussianBlur stdDeviation="148.8" result="effect1_foregroundBlur_128_501"/>

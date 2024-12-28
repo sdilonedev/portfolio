@@ -3,26 +3,29 @@ const navItems = [
   {
     id: "proyectos",
     title: "Proyectos",
-    url: "/#proyectos"
+    url: "/#proyectos",
   },
   {
     id: "sobre-mi",
     title: "Sobre mí",
-    url: "/#sobre-mi"
+    url: "/#sobre-mi",
   },
   {
     id: "contacto",
     title: "Contacto",
-    url: "mailto:dilonealcantara@gmail.com"
-  }
-]
+    url: "mailto:dilonealcantara@gmail.com",
+  },
+];
 ---
+
 <header class="fixed top-0 z-10 w-full flex justify-center mx-auto mt-3">
-  <nav class="flex text-sm font-medium rounded-full text-token-neutral-217 justify-center items-center bg-token-dark-10/60 px-3 backdrop-blur-md gap-6">
+  <nav
+    class="flex text-sm font-medium rounded-full text-token-neutral-217 justify-center items-center bg-token-dark-10/60 px-3 backdrop-blur-md gap-6"
+  >
     {
       navItems.map((link) => (
-        <a 
-          class="relative block p-2 transition uppercase hover:text-purple-500 hover:underline"
+        <a
+          class="relative block p-2 transition uppercase hover:text-blue-500 hover:underline"
           aria-label={link.id}
           href={link.url}
         >
@@ -30,48 +33,48 @@ const navItems = [
         </a>
       ))
     }
-  </nav>  
+  </nav>
 </header>
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-purple-500")
+              item.classList.add("text-blue-500");
             } else {
-              item.classList.remove("text-purple-500")
+              item.classList.remove("text-blue-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
@@ -87,7 +90,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     0% {
-      @apply bg-token-dark-10/0 ;
+      @apply bg-token-dark-10/0;
     }
     to {
       @apply shadow-lg ring-1 backdrop-blur ring-white/10;
