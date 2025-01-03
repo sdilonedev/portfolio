@@ -1,9 +1,7 @@
 ---
-import "@fontsource-variable/space-grotesk";
-
 import { ViewTransitions } from "astro:transitions";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header from "../sections/Header.astro";
+import Footer from "../sections/Footer.astro";
 
 interface Props {
   title: string;
@@ -34,16 +32,37 @@ const { description, title } = Astro.props;
     <Header />
     <slot />
     <Footer />
-    <style is:global>
-      html {
-        scroll-behavior: smooth;
+    <style>
+      @font-face {
+        font-family: "General Sans";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("/fonts/general-sans.woff2") format("woff2");
       }
 
+      @font-face {
+        font-family: "Quicksand";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("/fonts/quicksand.woff2") format("woff2");
+      }
+
+      html,
       body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+        font-family: "General Sans";
+      }
+
+      @media (prefers-reduced-motion) {
+        html,
+        body {
+          scroll-behavior: auto;
+        }
       }
     </style>
   </body>

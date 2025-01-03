@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.1",
-    "@fontsource-variable/space-grotesk": "^5.1.0",
     "astro": "^4.15.9",
     "astro-compress": "^2.3.1",
     "astro-robots-txt": "^1.0.0",

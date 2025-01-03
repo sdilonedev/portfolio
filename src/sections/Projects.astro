@@ -1,17 +1,16 @@
 ---
-import ExpressIcon from "./icons/express.astro";
-import RustIcon from "./icons/rust.astro";
-import TypescriptIcon from "./icons/typescript.astro";
-import SocialPill from "./SocialPill.astro";
-import Github from "./icons/github.astro";
-import Next from "./icons/next.astro";
-import NestJs from "./icons/nestjs.astro";
-import Prisma from "./icons/prisma.astro";
-import Turso from "./icons/turso.astro";
-import Typeorm from "./icons/typeorm.astro";
-import Docker from "./icons/docker.astro";
-import Postgres from "./icons/postgres.astro";
-import LinkButton from "./LinkButton.astro";
+import ExpressIcon from "../components/icons//express.astro";
+import RustIcon from "../components/icons//rust.astro";
+import TypescriptIcon from "../components/icons//typescript.astro";
+import Github from "../components/icons//github.astro";
+import Next from "../components/icons//next.astro";
+import NestJs from "../components/icons//nestjs.astro";
+import Prisma from "../components/icons//prisma.astro";
+import Turso from "../components/icons//turso.astro";
+import Typeorm from "../components/icons//typeorm.astro";
+import Docker from "../components/icons//docker.astro";
+import Postgres from "../components/icons//postgres.astro";
+import LinkButton from "../components/LinkButton.astro";
 
 const TAGS = {
   RUST: {
@@ -66,11 +65,11 @@ const PROJECTS = [
     tags: [TAGS.RUST],
   },
   {
-    title: "Slash - Acortador de URL",
+    title: "Tidy - Acortador de URL",
     description:
-      "Slash es un acortador de URLs que permite crear enlaces personalizados, gestionar estadísticas de clics y dispositivos, y optimizar el intercambio de enlaces de forma sencilla.",
-    github: "https://github.com/sdilonedev/slash",
-    image: "/projects/slash.webp",
+      "Tidy es un acortador de URLs que permite crear enlaces personalizados, gestionar estadísticas de clics y dispositivos, y optimizar el intercambio de enlaces de forma sencilla.",
+    github: "https://github.com/sdilonedev/tidy",
+    image: "/projects/tidy.webp",
     tags: [TAGS.TYPESCRIPT, TAGS.NEXT, TAGS.PRISMA, TAGS.TURSO],
   },
   {
@@ -105,7 +104,7 @@ const PROJECTS = [
         </div>
 
         <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-blue-300">{title}</h3>
+          <h3 class="text-2xl font-semibold text-blue-300">{title}</h3>
 
           <div class="flex flex-wrap mt-2">
             <ul class="flex flex-wrap gap-x-2 mb-2">
@@ -119,10 +118,10 @@ const PROJECTS = [
               ))}
             </ul>
 
-            <div class="mt-2 text-gray-400">{description}</div>
+            <div class="mt-2 text-gray-400 font-quicksand">{description}</div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
-                <LinkButton href={github}>
+                <LinkButton href={github} class="font-quicksand">
                   <Github class="size-6" />
                   Ver código fuente
                 </LinkButton>

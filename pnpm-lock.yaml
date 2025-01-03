@@ -14,9 +14,6 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.1
         version: 5.1.1(astro@4.15.9(@types/node@20.14.12)(lightningcss@1.25.1)(rollup@4.22.5)(terser@5.31.3)(typescript@5.6.2))(tailwindcss@3.4.13)
-      '@fontsource-variable/space-grotesk':
-        specifier: ^5.1.0
-        version: 5.1.0
       astro:
         specifier: ^4.15.9
         version: 4.15.9(@types/node@20.14.12)(lightningcss@1.25.1)(rollup@4.22.5)(terser@5.31.3)(typescript@5.6.2)
@@ -339,9 +336,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource-variable/space-grotesk@5.1.0':
-    resolution: {integrity: sha512-K2mwQYNyLook6EbtMB+Ix8srQsYZRigfxayoSGl1QsgVAk/J21s0FMZu0FWzTvONyQkYAR704rLfYSstVMi6jQ==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2773,8 +2767,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
-
-  '@fontsource-variable/space-grotesk@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
